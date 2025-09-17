@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const body = req.body;
 
-    // Notion webhook 驗證用
+    // Notion webhook 驗證
     if (body?.challenge) {
       return res.status(200).json({ challenge: body.challenge });
     }
